@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="allProjects" extends="userDashBoardLayout">
+		<put-attribute name="title" value="Projects" />
+		<put-attribute name="body" value="/WEB-INF/pages/project/projects.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/pages/common/footer.jsp" />
+	</definition>
+	
+	<definition name="projectInfo" extends="userDashBoardLayout">
+		<put-attribute name="title" value="Projects" />
+		<put-attribute name="body" value="/WEB-INF/pages/project/projectInfo.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/pages/common/footer.jsp" />
+	</definition>
+	
+	<definition name="addProject" extends="userDashBoardLayout">
+		<put-attribute name="title" value="Projects" />
+		<put-attribute name="body" value="/WEB-INF/pages/project/addProject.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/pages/common/footer.jsp" />
+	</definition>
+	
+	<definition name="editProject" extends="userDashBoardLayout">
+		<put-attribute name="title" value="Projects" />
+		<put-attribute name="body" value="/WEB-INF/pages/project/editProject.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/pages/common/footer.jsp" />
+	</definition>
+</tiles-definitions>

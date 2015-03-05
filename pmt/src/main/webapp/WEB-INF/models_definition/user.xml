@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="userDashBoardLayout"
+		template="/WEB-INF/pages/common/mainPageTemplate.jsp">
+		<put-attribute name="header" value="/WEB-INF/pages/common/header.jsp" />
+		<put-attribute name="leftSideBar"
+			value="/WEB-INF/pages/common/leftSideBar.jsp" />
+		<put-attribute name="chatBar" value="/WEB-INF/pages/common/chatBar.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/pages/common/footer.jsp" />
+	</definition>
+
+	<definition name="layoutForUserOperationsOtherThanDashBoard"
+		template="/WEB-INF/pages/common/classic.jsp">
+		<put-attribute name="footer" value="/WEB-INF/pages/common/footer.jsp" />
+	</definition>
+
+	<definition name="userHome" extends="userDashBoardLayout">
+		<put-attribute name="title" value="Users" />
+		<put-attribute name="body" value="/WEB-INF/pages/user/users.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/pages/common/footer.jsp" />
+	</definition>
+
+	<definition name="userInfo" extends="userDashBoardLayout">
+		<put-attribute name="title" value="User Info" />
+		<put-attribute name="body" value="/WEB-INF/pages/user/userInfo.jsp" />
+	</definition>
+
+	<definition name="signup" extends="layoutForUserOperationsOtherThanDashBoard">
+		<put-attribute name="title" value="Signup" />
+		<put-attribute name="body" value="/WEB-INF/pages/user/signup.jsp" />
+	</definition>
+
+	<definition name="login" extends="userDashBoardLayout">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/pages/common/footer.jsp" />
+	</definition>
+
+	<definition name="editUser" extends="userDashBoardLayout">
+		<put-attribute name="title" value="Signup" />
+		<put-attribute name="body" value="/WEB-INF/pages/user/editUser.jsp" />
+	</definition>
+	
+	<definition name="editUserRoles" extends="userDashBoardLayout">
+		<put-attribute name="title" value="Signup" />
+		<put-attribute name="body" value="/WEB-INF/pages/user/editUserRoles.jsp" />
+	</definition>
+</tiles-definitions>

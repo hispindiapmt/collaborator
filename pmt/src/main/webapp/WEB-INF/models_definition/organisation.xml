@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="organisationCommonLayout" template="/WEB-INF/pages/common/classic.jsp">
+		<put-attribute name="footer" value="/WEB-INF/pages/common/footer.jsp" />
+	</definition>
+
+	<definition name="index" extends="organisationCommonLayout">
+		<put-attribute name="title" value="Collaborator" />
+		<put-attribute name="body" value="/WEB-INF/pages/organization/index.jsp" />
+	</definition>
+</tiles-definitions>
