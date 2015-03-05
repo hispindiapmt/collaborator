@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -54,7 +55,7 @@ public class Project
     private String status;
 
     @ManyToOne
-    @Column(name="office_responsible")
+    @JoinColumn(name="office_responsible")
     private Office officeResponsible;
 
     @OneToMany( fetch = FetchType.EAGER, mappedBy = "project", cascade = CascadeType.ALL )
