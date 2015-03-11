@@ -1,14 +1,24 @@
 package org.hisp.pmt.controller.organisation;
 
+import org.hisp.pmt.service.organisation.CommonOfficeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 @Controller
-public class IndexController 
+public class IndexController
 {
-	@RequestMapping("/index")
-	 public String index()
-	 {
-	    return "index";		
-	 }	
+    
+    @Autowired
+    public CommonOfficeService commonOfficeService;
+    
+    @RequestMapping( "/index" )
+    public String index(Model model)
+    {
+        model.addAttribute( "offices", commonOfficeService.findAllOffice() );
+        return "index";
+    }
+
 }
